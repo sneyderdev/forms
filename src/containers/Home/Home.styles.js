@@ -17,6 +17,7 @@ const HomeSection = styled.section`
     line-height: 50px;
     font-weight: bold;
     border-radius: 10px;
+    transition: all 200ms;
     color: ${({ theme }) => theme.colors.white};
 
     &:first-child {
@@ -25,6 +26,10 @@ const HomeSection = styled.section`
 
     &:last-child {
       background: ${({ theme }) => theme.colors.tertiary};
+    }
+
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 `;

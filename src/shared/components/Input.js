@@ -18,8 +18,13 @@ const Input = styled.input`
     font-weight: bold;
     border: 0;
     cursor: pointer;
+    transition: all 200ms;
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.primary};
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 
   &::placeholder {

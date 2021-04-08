@@ -11,12 +11,17 @@ const Button = styled.button`
   outline: 0;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 200ms;
   font-family: ${({ theme }) => theme.font.primary};
   font-size: ${({ theme }) => theme.sizes.n};
   background: ${({ theme }) => theme.colors.white};
 
   img {
     margin-right: 10px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
   }
 `;
 
