@@ -1,9 +1,14 @@
 import React from 'react';
 
+import { GoogleButton, LoginForm } from '../../components';
+
 const Login = () => (
-  <div>
-    <h1>Login</h1>
-  </div>
+  <section>
+    <h2>Sign in to Forms</h2>
+    <GoogleButton />
+    <hr />
+    <LoginForm />
+  </section>
 );
 
 export default Login;
