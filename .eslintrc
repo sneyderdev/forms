@@ -2,9 +2,15 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error"
+  },
+  "globals": {
+    "window": "writable",
+    "document": "writable",
+    "localStorage": "writable",
+    "FormData": "writable"
   },
   "parser": "babel-eslint"
 }
