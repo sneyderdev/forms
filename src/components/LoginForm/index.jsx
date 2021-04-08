@@ -3,9 +3,9 @@ import React from 'react';
 const LoginForm = () => (
   <div>
     <form>
-      <input type="text" />
+      <input type="text" name="email" placeholder="Your email" />
       <div>
-        <input type="password" />
+        <input type="password" name="password" placeholder="Your password" />
         <span />
         <a href="/">Forgot password?</a>
       </div>
