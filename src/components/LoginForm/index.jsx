@@ -7,7 +7,7 @@ import LoginFormContainer from './LoginForm.styles';
 const LoginForm = () => (
   <div>
     <LoginFormContainer>
-      <Input type="text" name="email" placeholder="Your email" required />
+      <Input type="email" name="email" placeholder="Your email" required />
       <PasswordContainer>
         <Input
           type="password"
