@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GoogleButton, LoginForm } from '../../components';
+import { GoogleButton, LoginForm } from '@components';
 
 const Login = () => (
   <section>

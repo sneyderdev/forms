@@ -1,6 +1,6 @@
 import React from 'react';
 
-import googleIcon from '../../assets/images/google-icon.png';
+import googleIcon from '@images/google-icon.png';
 
 const GoogleButton = () => (
   <div>
