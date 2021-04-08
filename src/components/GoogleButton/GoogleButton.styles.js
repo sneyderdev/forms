@@ -10,6 +10,7 @@ const Button = styled.button`
   border: 0;
   outline: 0;
   border-radius: 10px;
+  cursor: pointer;
   font-family: ${({ theme }) => theme.font.primary};
   font-size: ${({ theme }) => theme.sizes.n};
   background: ${({ theme }) => theme.colors.white};

@@ -10,17 +10,20 @@ const RegisterFormContainer = styled.form`
   }
 
   input[type='checkbox'] {
-    display: none;
+    width: 0;
+    height: 0;
+    border: 0;
   }
 
   label {
-    display: block;
+    display: inline-block;
     padding-left: 25px;
     position: relative;
+    cursor: pointer;
 
     &::before {
       content: '';
-      display: inline-block;
+      display: block;
       width: 15px;
       height: 15px;
       position: absolute;
@@ -36,6 +39,14 @@ const RegisterFormContainer = styled.form`
     border-color: ${({ theme }) => theme.colors.active};
     background: ${({ theme }) => theme.colors.active} url(${check}) center
       no-repeat;
+  }
+
+  @media screen and (min-width: 1024px) {
+    div:first-of-type {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
   }
 `;
 

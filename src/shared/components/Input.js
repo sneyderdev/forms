@@ -17,6 +17,7 @@ const Input = styled.input`
     margin-bottom: 0;
     font-weight: bold;
     border: 0;
+    cursor: pointer;
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.primary};
   }
