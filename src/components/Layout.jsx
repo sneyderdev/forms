@@ -5,13 +5,14 @@ import { Grid, ContentGrid, MainContent, Container } from '@shared';
 
 import Header from './Header';
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
   const { pathname } = useLocation();
 
   return (
     <Grid>
-      <section style={{ display: 'none' }} />
+      <Sidebar />
       <ContentGrid pathName={pathname}>
         {pathname !== '/' && <Header />}
         <MainContent>
