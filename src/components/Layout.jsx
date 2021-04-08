@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -12,7 +12,12 @@ const Layout = ({ children }) => {
       <section />
       <section>
         {pathname !== '/' && <Header />}
-        {children}
+        <main>
+          <h1>
+            <Link to="/">Forms</Link>
+          </h1>
+          {children}
+        </main>
         <Footer />
       </section>
     </div>
