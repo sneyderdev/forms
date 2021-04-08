@@ -32,5 +32,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     open: true,
+    historyApiFallback: true,
   },
 };
