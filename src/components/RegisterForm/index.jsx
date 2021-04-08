@@ -1,33 +1,37 @@
 import React from 'react';
 
+import { Input, PasswordContainer } from '@shared';
+
+import RegisterFormContainer from './RegisterForm.styles';
+
 const RegisterForm = () => (
   <div>
-    <form>
+    <RegisterFormContainer>
       <div>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="text" name="username" placeholder="Username" />
+        <Input type="text" name="name" placeholder="Name" />
+        <Input type="text" name="username" placeholder="Username" />
       </div>
-      <input type="email" name="email" placeholder="Email" />
-      <div>
-        <input type="password" name="password" placeholder="Password" />
+      <Input type="email" name="email" placeholder="Email" />
+      <PasswordContainer>
+        <Input type="password" name="password" placeholder="Password" />
         <span />
-      </div>
-      <div>
-        <input
+      </PasswordContainer>
+      <PasswordContainer>
+        <Input
           type="password"
           name="confirm-password"
           placeholder="Confirm password"
         />
         <span />
-      </div>
+      </PasswordContainer>
       <div>
+        <input type="checkbox" name="agree-to-terms" id="agree-to-terms" />
         <label htmlFor="agree-to-terms">
-          <input type="checkbox" name="agree-to-terms" id="agree-to-terms" />
           Accept our <a href="/">Terms of Service</a>.
         </label>
       </div>
-      <input type="submit" value="Create Account" />
-    </form>
+      <Input type="submit" value="Create Account" />
+    </RegisterFormContainer>
   </div>
 );
 

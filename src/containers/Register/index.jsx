@@ -2,13 +2,15 @@ import React from 'react';
 
 import { GoogleButton, RegisterForm } from '@components';
 
+import { FormSection } from '@shared';
+
 const Register = () => (
-  <section>
+  <FormSection>
     <h2>Sign up to Forms</h2>
     <GoogleButton />
     <hr />
     <RegisterForm />
-  </section>
+  </FormSection>
 );
 
 export default Register;

@@ -7,3 +7,4 @@ export { default as MainContent } from './components/MainContent';
 export { default as Container } from './components/Container';
 export { default as FormSection } from './components/FormSection';
 export { default as Input } from './components/Input';
+export { default as PasswordContainer } from './components/PasswordContainer';

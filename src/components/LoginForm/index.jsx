@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Input } from '@shared';
+import { Input, PasswordContainer } from '@shared';
 
 import LoginFormContainer from './LoginForm.styles';
 
@@ -8,10 +8,10 @@ const LoginForm = () => (
   <div>
     <LoginFormContainer>
       <Input type="text" name="email" placeholder="Your email" />
-      <div>
+      <PasswordContainer>
         <Input type="password" name="password" placeholder="Your password" />
         <span />
-      </div>
+      </PasswordContainer>
       <a href="/">Forgot password?</a>
       <Input type="submit" value="Sign in" />
     </LoginFormContainer>
