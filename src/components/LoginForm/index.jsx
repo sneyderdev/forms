@@ -7,9 +7,14 @@ import LoginFormContainer from './LoginForm.styles';
 const LoginForm = () => (
   <div>
     <LoginFormContainer>
-      <Input type="text" name="email" placeholder="Your email" />
+      <Input type="text" name="email" placeholder="Your email" required />
       <PasswordContainer>
-        <Input type="password" name="password" placeholder="Your password" />
+        <Input
+          type="password"
+          name="password"
+          placeholder="Your password"
+          required
+        />
         <span />
       </PasswordContainer>
       <a href="/">Forgot password?</a>
