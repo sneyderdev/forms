@@ -1,14 +1,16 @@
 import React from 'react';
 
+import FooterContainer from './Footer.styles';
+
 const Footer = () => (
-  <footer>
+  <FooterContainer>
     <span>
       Made with 💚 by{' '}
       <a href="https://sneyder.dev" target="_blank" rel="noreferrer">
         Sneyder Barreto
       </a>
     </span>
-  </footer>
+  </FooterContainer>
 );
 
 export default Footer;

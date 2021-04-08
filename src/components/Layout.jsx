@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { Grid, ContentGrid, MainContent, Container } from '@shared';
+
 import Header from './Header';
 import Footer from './Footer';
 
@@ -8,19 +10,21 @@ const Layout = ({ children }) => {
   const { pathname } = useLocation();
 
   return (
-    <div>
-      <section />
-      <section>
+    <Grid>
+      <section style={{ display: 'none' }} />
+      <ContentGrid pathName={pathname}>
         {pathname !== '/' && <Header />}
-        <main>
-          <h1>
-            <Link to="/">Forms</Link>
-          </h1>
-          {children}
-        </main>
+        <MainContent>
+          <Container>
+            <h1>
+              <Link to="/">Forms</Link>
+            </h1>
+            {children}
+          </Container>
+        </MainContent>
         <Footer />
-      </section>
-    </div>
+      </ContentGrid>
+    </Grid>
   );
 };
 

@@ -7,10 +7,20 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     font-family: ${({ theme }) => theme.font.primary};
+    font-size: ${({ theme }) => theme.sizes.n};
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.secondary};
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.active};
   }
 `;
 
