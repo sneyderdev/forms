@@ -44,5 +44,6 @@ module.exports = {
     compress: true,
     open: true,
     historyApiFallback: true,
+    host: '0.0.0.0',
   },
 };
