@@ -2,13 +2,15 @@ import React from 'react';
 
 import googleIcon from '@images/google-icon.png';
 
+import Button from './GoogleButton.styles';
+
 const GoogleButton = () => (
   <div>
     <form>
-      <button type="button">
+      <Button type="button">
         <img src={googleIcon} alt="Google" />
         Sign in with Google
-      </button>
+      </Button>
     </form>
   </div>
 );

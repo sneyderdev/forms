@@ -1,16 +1,20 @@
 import React from 'react';
 
+import { Input } from '@shared';
+
+import LoginFormContainer from './LoginForm.styles';
+
 const LoginForm = () => (
   <div>
-    <form>
-      <input type="text" name="email" placeholder="Your email" />
+    <LoginFormContainer>
+      <Input type="text" name="email" placeholder="Your email" />
       <div>
-        <input type="password" name="password" placeholder="Your password" />
+        <Input type="password" name="password" placeholder="Your password" />
         <span />
-        <a href="/">Forgot password?</a>
       </div>
-      <input type="submit" value="Sign in" />
-    </form>
+      <a href="/">Forgot password?</a>
+      <Input type="submit" value="Sign in" />
+    </LoginFormContainer>
   </div>
 );
 
