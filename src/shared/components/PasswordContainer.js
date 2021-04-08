@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import eye from '@images/eye.svg';
+import closeEye from '@images/close-eye.svg';
 
 const PasswordContainer = styled.div`
   margin-bottom: 15px;
@@ -20,6 +21,11 @@ const PasswordContainer = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    outline: 0;
+  }
+
+  span.active {
+    background-image: url(${closeEye});
   }
 `;
 
