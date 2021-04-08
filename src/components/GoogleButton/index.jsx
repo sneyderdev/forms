@@ -1,10 +1,12 @@
 import React from 'react';
 
+import googleIcon from '../../assets/images/google-icon.png';
+
 const GoogleButton = () => (
   <div>
     <form>
       <button type="button">
-        <img src="" alt="" />
+        <img src={googleIcon} alt="Google" />
         Sign in with Google
       </button>
     </form>

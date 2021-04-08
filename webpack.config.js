@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'assets/images/[name][ext]',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -20,6 +21,10 @@ module.exports = {
       {
         test: /\.html$/,
         use: ['html-loader'],
+      },
+      {
+        test: /\.(png|svg)$/,
+        type: 'asset/resource',
       },
     ],
   },
