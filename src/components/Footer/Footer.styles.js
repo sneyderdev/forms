@@ -12,7 +12,6 @@ const FooterContainer = styled.footer`
 
     &:hover {
       text-decoration: underline;
-      text-decoration-color: ${({ theme }) => theme.colors.light};
     }
   }
 `;

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import HeaderContainer from './Header.styles';
+
 const Header = () => {
   const { pathname } = useLocation();
 
   return (
-    <header>
+    <HeaderContainer>
       <nav>
         {pathname === '/login' ? (
           <p>
@@ -17,7 +19,7 @@ const Header = () => {
           </p>
         )}
       </nav>
-    </header>
+    </HeaderContainer>
   );
 };
 
