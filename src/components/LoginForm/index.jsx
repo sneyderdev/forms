@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Input, PasswordContainer } from '@shared';
 
@@ -6,6 +7,8 @@ import LoginFormContainer from './LoginForm.styles';
 
 const LoginForm = () => {
   const passwordEye = useRef(null);
+  const [formValues, setFormValues] = useState({});
+  const history = useHistory();
 
   const onPasswordEyeClick = () => {
     passwordEye.current.classList.toggle('active');
@@ -16,10 +19,31 @@ const LoginForm = () => {
     }
   };
 
+  const onInputChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const canSubmit = [formValues.email, formValues.password].every(Boolean);
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+
+    history.push('/');
+  };
+
   return (
     <div>
-      <LoginFormContainer>
-        <Input type="email" name="email" placeholder="Your email" required />
+      <LoginFormContainer onSubmit={onFormSubmit}>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+          onChange={onInputChange}
+        />
         <PasswordContainer>
           <span
             role="button"
@@ -34,10 +58,11 @@ const LoginForm = () => {
             name="password"
             placeholder="Your password"
             required
+            onChange={onInputChange}
           />
         </PasswordContainer>
         <a href="/">Forgot password?</a>
-        <Input type="submit" value="Sign in" />
+        <Input type="submit" value="Sign in" disabled={!canSubmit} />
       </LoginFormContainer>
     </div>
   );

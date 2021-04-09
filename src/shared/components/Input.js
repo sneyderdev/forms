@@ -34,6 +34,11 @@ const Input = styled.input`
   &:focus {
     border-color: ${({ theme }) => theme.colors.active};
   }
+
+  &:disabled {
+    color: ${({ theme }) => theme.colors.light};
+    background: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
 
 export default Input;
