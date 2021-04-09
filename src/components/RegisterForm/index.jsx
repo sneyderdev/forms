@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { Input, PasswordContainer } from '@shared';
 
@@ -116,7 +116,7 @@ const RegisterForm = () => {
             onChange={onInputChange}
           />
           <label htmlFor="agreeToTerms">
-            Accept our <a href="/">Terms of Service</a>.
+            Accept our <Link to="/">Terms of Service</Link>.
           </label>
         </div>
         <Input type="submit" value="Create Account" disabled={!canSubmit} />

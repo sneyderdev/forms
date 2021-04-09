@@ -1,16 +1,23 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { GoogleButton, LoginForm } from '@components';
 
 import { FormSection } from '@shared';
 
 const Login = () => (
-  <FormSection>
-    <h2>Sign in to Forms</h2>
-    <GoogleButton />
-    <hr />
-    <LoginForm />
-  </FormSection>
+  <>
+    <Helmet>
+      <title>Sign in - Forms</title>
+    </Helmet>
+
+    <FormSection>
+      <h2>Sign in to Forms</h2>
+      <GoogleButton />
+      <hr />
+      <LoginForm />
+    </FormSection>
+  </>
 );
 
 export default Login;

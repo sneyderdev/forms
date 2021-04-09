@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { Input, PasswordContainer } from '@shared';
 
@@ -61,7 +61,7 @@ const LoginForm = () => {
             onChange={onInputChange}
           />
         </PasswordContainer>
-        <a href="/">Forgot password?</a>
+        <Link to="/">Forgot password?</Link>
         <Input type="submit" value="Sign in" disabled={!canSubmit} />
       </LoginFormContainer>
     </div>
